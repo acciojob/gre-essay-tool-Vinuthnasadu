@@ -1,15 +1,11 @@
-//your code here
-let text = document.getElementById("evaluatedText");
-let count = document.getElementById("wordCount");
-let cnt=0;
-evaluatedText.addEventListener('keyup', (e) => {
-
-    if(e.key == " "){
-      cnt=cnt+1;
-      wordCount.innerHTML = cnt;
-      console.log(cnt);
+function wordCounts() {
+    var text = document.getElementById("evaluatedText").value;
+    var count = 0;
+    var split = text.split(' ');
+    for (var i = 0; i < split.length; i++) {
+     if (split[i] != "") {
+      count ++;
+     }
     }
-    else{
-        
-    }
-})
+    document.getElementById("wordCount").innerHTML = count;
+   }
